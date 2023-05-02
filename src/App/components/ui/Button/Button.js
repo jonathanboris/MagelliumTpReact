@@ -1,14 +1,15 @@
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Button.module.css";
 import propTypes from "prop-types";
 
 const Button = (props) => {
-
+    const [isClicked, setIsClicked] = useState(false)
     console.log(props)
     return (
         
-<button  style={{...props.style,backgroundColor:props.backgroundColor}} className={styles.Button} onClick={(evt)=>{
+<button  style={{...props.style,backgroundColor:props.backgroundColor}} className={isClicked?styles.Button+' '+styles.clicked:styles.Button} onClick={(evt)=>{
+    setIsClicked(true)
     console.log(evt) 
     props.onClick('le roi albert')}}>
             {props.children}
