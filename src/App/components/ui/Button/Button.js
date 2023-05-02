@@ -8,7 +8,7 @@ const Button = (props) => {
     console.log(props)
     return (
         
-<button  style={{backgroundColor:props.backgroundColor}} className={styles.Button} onClick={(evt)=>{
+<button  style={{...props.style,backgroundColor:props.backgroundColor}} className={styles.Button} onClick={(evt)=>{
     console.log(evt) 
     props.onClick('le roi albert')}}>
             {props.children}
@@ -19,7 +19,8 @@ const Button = (props) => {
 Button.propTypes = {
     onClick: propTypes.func.isRequired,
     children: propTypes.any.isRequired,
-    backgroundColor: propTypes.string
+    backgroundColor: propTypes.string,
+    style: propTypes.object
 }
 
 Button.defaultProps = {
