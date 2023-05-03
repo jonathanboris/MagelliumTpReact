@@ -1,23 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../logo.svg';
-import './App.css';
-import Button from './components/ui/Button/Button';
+import React, { Component } from 'react'
+import Header from './components/ui/Header/Header'
+import Navbar from './components/ui/Navbar/Navbar'
+import WfirstFlexGrow from './components/layout/WfirstFlexGrow/WfirstFlexGrow'
+import Footer from './components/ui/Footer/Footer'
+import MemeForm from './components/MemeForm/MemeForm'
+import { MemeSVGViewer,emptyMeme } from 'orsys-tjs-meme'
+import { DummyMeme } from 'orsys-tjs-meme/dist/interfaces/common'
 
-function App() {
-  const [counter, setcounter] = useState(0)
-  useEffect(() => {
-    // return () => {
-    //   effect
-    // };
-    console.log(`voici la value du compteur : ${counter}`)
-  }, [counter])
-  return (
-    <div className="App" data-testid="App">
-      <div style={{textAlign:'center'}}>{counter}</div>
-    <Button onClick={()=> {setcounter(counter+1);}}>+</Button>
-    <Button onClick={()=> {setcounter(counter-1);}}>-</Button>
-    </div>
-  );
+type Props = {}
+
+type State = {}
+
+export default class App extends Component<Props, State> {
+  state = {meme:emptyMeme}
+
+  render() {
+    return (
+      <div className='App' data-testid="App">
+        <Header/>
+        <Navbar/>
+        <WfirstFlexGrow>
+         <MemeSVGViewer meme={this.state.meme} image={undefined}/>
+          <MemeForm/>
+        </WfirstFlexGrow>
+        <Footer/>
+      </div>
+    ) 
+  }
 }
-
-export default App;

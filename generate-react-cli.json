@@ -11,37 +11,35 @@
       "withStory": true,
       "withLazy": true
     },
-    "functiontCmp": {
+    "functionCmp": {
       "path": "src/App/components",
       "withStyle": true,
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate":{
-        "component":"grc/genericFunction/TemplateName.js"
+      "customTemplates": {
+        "component": "grc/genericFunction/TemplateName.js"
       }
     },
-      "uiCmp": {
-        "path": "src/App/components/ui",
-        "withStyle": true,
-        "withTest": true,
-        "withStory": true,
-        "withLazy": true,
-        "customTemplate":{
-          "component":"grc/genericFunction/TemplateName.js"
-        }
-
-    },
-    "LayoutCmp": {
+    "uiCmp": {
       "path": "src/App/components/ui",
       "withStyle": true,
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate":{
-        "component":"grc/genericLayoutFunction/TemplateName.js"
+      "customTemplates": {
+        "component": "grc/genericFunction/TemplateName.js"
       }
-
-  }
+    },
+    "layoutCmp": {
+      "path": "src/App/components/layout",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true,
+      "customTemplates": {
+        "component": "grc/genericLayoutFunction/TemplateName.js"
+      }
+    }
   }
 }
