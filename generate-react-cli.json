@@ -1,0 +1,47 @@
+{
+  "usesTypeScript": false,
+  "usesCssModule": true,
+  "cssPreprocessor": "css",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/App/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true
+    },
+    "functiontCmp": {
+      "path": "src/App/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true,
+      "customTemplate":{
+        "component":"grc/genericFunction/TemplateName.js"
+      }
+    },
+      "uiCmp": {
+        "path": "src/App/components/ui",
+        "withStyle": true,
+        "withTest": true,
+        "withStory": true,
+        "withLazy": true,
+        "customTemplate":{
+          "component":"grc/genericFunction/TemplateName.js"
+        }
+
+    },
+    "LayoutCmp": {
+      "path": "src/App/components/ui",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true,
+      "customTemplate":{
+        "component":"grc/genericLayoutFunction/TemplateName.js"
+      }
+
+  }
+  }
+}
