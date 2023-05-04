@@ -6,7 +6,7 @@
 - npx generate-react-cli@7.2 c Header Navbar Footer --type=uiCmp
 
 ```
- apres configuration du package.json la commande devient 'npm run uiCmp Header Navbar Footer'
+ apres configuration du package.json "uiCpm:'npx generate-react-cli@7.2 c  --type=uiCmp'" la commande devient 'npm run uiCmp Header Navbar Footer'
 
 ```
 
@@ -18,3 +18,14 @@
 ### Install redux tools
 
 - yarn add @reduxjs/toolkit react-redux
+- snippe redux slice "rxslice"
+
+### dev tool
+
+- Redux devTools
+- React Developer tools
+- Rest Client
+
+### contact formateur
+
+- 06 64 27 63 60

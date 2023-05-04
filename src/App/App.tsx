@@ -6,6 +6,10 @@ import Footer from './components/ui/Footer/Footer'
 import MemeForm from './components/MemeForm/MemeForm'
 import { MemeSVGViewer, emptyMeme, MemeInterface, ImageInterface } from 'orsys-tjs-meme'
 import { DummyMeme } from 'orsys-tjs-meme/dist/interfaces/common'
+import store from './store/store'
+import { addImages } from './store/ressources'
+import StoredMemeForm from './components/MemeForm/StoredMemeForm'
+import StoredMemeViewer from './components/MemeForm/StoredMemeViewer'
 
 interface IAppState {
   meme: MemeInterface,
@@ -26,9 +30,14 @@ export default class App extends Component<IAppProps, IAppState> {
 
   componentDidMount(): void {
 
-    fetch('http://localhost:5679/images', { method: 'GET', headers: { Origin: 'http://localhost:5679' } }).then(response => response.json()).then(images => {
-      this.setState({ images: images })
-    })
+    fetch('http://localhost:5679/images', { method: 'GET', headers: { Origin: 'http://localhost:5679' } })
+      .then(response => response.json())
+      .then(images => {
+        this.setState({ images: images })
+        store.dispatch(addImages(images))
+      })
+
+
 
   }
 
@@ -39,13 +48,13 @@ export default class App extends Component<IAppProps, IAppState> {
         <Header />
         <Navbar />
         <WfirstFlexGrow>
-          <MemeSVGViewer meme={this.state.meme} image={
-            this.state.images.find(image => image.id === this.state.meme.imageId)
-          } basePath='' />
+          <StoredMemeViewer basePath='' />
 
-          <MemeForm meme={this.state.meme} onMemeChange={
-            (meme: MemeInterface) => this.setState({ meme: meme })
-          } images={this.state.images} />
+          <StoredMemeForm
+          //meme={this.state.meme}
+          //onMemeChange={(meme: MemeInterface) => this.setState({ meme: meme })}
+          //images={this.state.images}
+          />
         </WfirstFlexGrow>
         <Footer />
       </div >

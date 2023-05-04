@@ -1,0 +1,25 @@
+.Modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ACACACFA;
+}
+.mainContainer{
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    
+}
+.title{
+    font-style: italic;
+    font-weight: 900;
+}
+.content{font-size: small; padding: 5px;}
+.buttons{display: flex; justify-content: right;}
+.buttons>*{margin-left:20px;}

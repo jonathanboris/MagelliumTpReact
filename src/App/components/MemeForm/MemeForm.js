@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styles from "./MemeForm.module.css";
 import { emptyMeme } from "orsys-tjs-meme";
 import Button from "../ui/Button/Button";
+import { useSelector } from "react-redux";
+import store from "../../store/store";
 
 const MemeForm = (props) => {
  
@@ -154,3 +156,4 @@ MemeForm.propTypes = {
 MemeForm.defaultProps = {};
 
 export default MemeForm;
+
