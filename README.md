@@ -9,3 +9,12 @@
  apres configuration du package.json la commande devient 'npm run uiCmp Header Navbar Footer'
 
 ```
+
+### json server
+
+- npx json-server -p 5679 db/db.json
+- 200 ok, 404 ressource non trouvée , 500 error server, 304 ressource inchanger
+
+### Install redux tools
+
+- yarn add @reduxjs/toolkit react-redux
